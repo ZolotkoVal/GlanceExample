@@ -9,4 +9,8 @@ class StockAppWidgetReceiver : GlanceAppWidgetReceiver() {
   super.onEnabled(context)
   PriceDataRepo.update()
  }
+ override fun onDisabled(context: Context) {
+  PriceUpdater.stop()
+  super.onDisabled(context)
+ }
 }

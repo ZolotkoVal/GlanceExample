@@ -4,16 +4,23 @@ import org.junit.Assert.*
 import org.junit.Test
 
 class PriceDataRepoTest {
+ @Test fun exposesFloatPriceFlow() {
+  PriceDataRepo.update()
+  val price: Any = PriceDataRepo.currentPrice.value
+  assertTrue("PDF requires StateFlow<Float>", price is Float)
+ }
  @Test fun updatesPublishConsistentSnapshots() {
   repeat(100) {
-   val before = PriceDataRepo.currentPrice.value
+   val before = PriceDataRepo.quote.value
    PriceDataRepo.update()
-   val after = PriceDataRepo.currentPrice.value
+   val after = PriceDataRepo.quote.value
    assertEquals(before.revision + 1, after.revision)
-   assertEquals(before.price, after.previous)
+   val previous = if (before.revision == 0L) 0f else before.price
+   assertEquals(previous, after.previous)
    assertTrue(after.price >= 20f && after.price < 35f)
-   assertEquals(percentageChange(before.price, after.price), after.change)
-   assertEquals(after.price >= before.price, after.rising)
+   assertEquals(percentageChange(previous, after.price), after.change)
+   assertEquals(previous > 0f && after.price > previous, after.rising)
+   assertEquals(after.price, PriceDataRepo.currentPrice.value)
   }
  }
  @Test fun percentageHandlesFirstPriceAndDirections() {

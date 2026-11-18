@@ -30,7 +30,7 @@ object PriceUpdater {
  }
  suspend fun refresh(context: Context, reason: String) {
   PriceDataRepo.update()
-  val quote = PriceDataRepo.currentPrice.value
+  val quote = PriceDataRepo.quote.value
   Log.d("GlancePrices", "$reason revision=${quote.revision} price=${quote.price} change=${quote.change}")
   StockAppWidget().updateAll(context)
  }

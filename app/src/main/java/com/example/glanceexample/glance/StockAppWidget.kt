@@ -21,7 +21,7 @@ class StockAppWidget : GlanceAppWidget() {
   provideContent { GlanceTheme { GlanceContent() } }
  }
  @Composable private fun GlanceContent() {
-  val quote by PriceDataRepo.currentPrice.collectAsState()
+  val quote by PriceDataRepo.quote.collectAsState()
   Column(GlanceModifier.fillMaxSize().background(GlanceTheme.colors.background).padding(8.dp)) {
    StockDisplay(quote)
   }

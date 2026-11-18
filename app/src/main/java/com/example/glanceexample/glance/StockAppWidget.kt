@@ -10,6 +10,8 @@ import androidx.compose.ui.unit.sp
 import androidx.glance.*
 import androidx.glance.appwidget.GlanceAppWidget
 import androidx.glance.appwidget.SizeMode
+import androidx.glance.action.clickable
+import androidx.glance.appwidget.action.actionRunCallback
 import androidx.glance.appwidget.cornerRadius
 import androidx.glance.appwidget.provideContent
 import androidx.glance.layout.*
@@ -35,12 +37,12 @@ class StockAppWidget : GlanceAppWidget() {
   if (size.width >= mediumMode.width && size.height >= mediumMode.height) Medium(quote) else Small(quote)
  }
  @Composable private fun Small(quote: StockPrice) {
-  Column(GlanceModifier.fillMaxSize().background(GlanceTheme.colors.background).padding(8.dp)) {
+  Column(GlanceModifier.clickable(actionRunCallback<RefreshAction>()).fillMaxSize().background(GlanceTheme.colors.background).padding(8.dp)) {
    StockDisplay(quote)
   }
  }
  @Composable private fun Medium(quote: StockPrice) {
-  Column(GlanceModifier.fillMaxSize().cornerRadius(15.dp).background(GlanceTheme.colors.background).padding(8.dp),
+  Column(GlanceModifier.clickable(actionRunCallback<RefreshAction>()).fillMaxSize().cornerRadius(15.dp).background(GlanceTheme.colors.background).padding(8.dp),
    horizontalAlignment = Alignment.Horizontal.CenterHorizontally) {
    StockDisplay(quote)
    if (quote.previous > 0f && quote.price != quote.previous) {

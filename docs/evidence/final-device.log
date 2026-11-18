@@ -1,0 +1,18 @@
+--------- beginning of main
+11-16 07:38:57.607 10593 11008 D GlancePrices: timer-start
+11-16 07:39:17.610 10593 11016 D GlancePrices: automatic revision=2 price=21.660444 change=-21
+11-16 07:39:37.616 10593 11016 D GlancePrices: automatic revision=3 price=20.399147 change=-5
+11-16 07:40:47.952 11175 11291 D GlancePrices: timer-start
+11-16 07:40:59.623 11175 11291 D GlancePrices: tap revision=1 price=23.922527 change=0
+11-16 07:41:07.955 11175 11288 D GlancePrices: automatic revision=2 price=21.965862 change=-8
+11-16 07:41:27.960 11175 11288 D GlancePrices: automatic revision=3 price=23.090714 change=5
+11-16 07:41:36.274 11175 11287 D GlancePrices: tap revision=4 price=31.054096 change=34
+11-16 07:41:47.966 11175 11286 D GlancePrices: automatic revision=5 price=21.917755 change=-29
+11-16 07:42:07.974 11175 11286 D GlancePrices: automatic revision=6 price=22.247688 change=1
+11-16 07:42:27.981 11175 11286 D GlancePrices: automatic revision=7 price=20.877396 change=-6
+11-16 07:42:47.997 11175 11286 D GlancePrices: automatic revision=8 price=20.805851 change=0
+11-16 07:43:08.013 11175 11286 D GlancePrices: automatic revision=9 price=34.30246 change=64
+11-16 07:43:12.607 11175 11286 D GlancePrices: tap revision=10 price=26.026718 change=-24
+11-16 07:43:13.620 11175 11286 D GlancePrices: tap revision=11 price=34.336605 change=31
+11-16 07:43:14.637 11175 11286 D GlancePrices: tap revision=12 price=20.517939 change=-40
+11-16 07:43:28.023 11175 11287 D GlancePrices: automatic revision=13 price=26.484575 change=29

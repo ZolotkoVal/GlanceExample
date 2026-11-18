@@ -1,0 +1,49 @@
+{
+  "host_time": "2026-11-18T14:31:09.186479+07:00",
+  "assets": {
+    "down_arrow.xml": {
+      "sha256": "a6d8e5d84b85124d0f9b2f198b6f13f216bbe3cf84ea630a36bead916f6edec5",
+      "matches_original": true
+    },
+    "glance_example_preview.png": {
+      "sha256": "4091083c9cbe61a615136d62974d1d7e89b783472b1d82da982550ffd32a9822",
+      "matches_original": true
+    },
+    "up_arrow.xml": {
+      "sha256": "8abd4b93ce9d313e3397980cea1304e26dea3b95146cdda74b875805849452ec",
+      "matches_original": true
+    }
+  },
+  "lint": {
+    "Error": 0,
+    "Warning": 11,
+    "Fatal": 0
+  },
+  "lint_ids": [
+    "DataExtractionRules",
+    "GradleDependency",
+    "IconLocation",
+    "MissingApplicationIcon",
+    "UnusedAttribute",
+    "VectorRaster"
+  ],
+  "tests_now": [
+    {
+      "name": "com.example.glanceexample.glance.WidgetLayoutTest",
+      "tests": "1",
+      "failures": "0"
+    }
+  ],
+  "automatic_intervals_seconds": [
+    20.005,
+    20.006,
+    20.008,
+    20.007,
+    20.016,
+    20.016,
+    20.01
+  ],
+  "final_pid_timer_starts": 1,
+  "final_pid_taps": 5,
+  "apk_sha256": "bdf5e3a125ccb8904b0b347139adc044f890fc4e25093b0f5ab8a2f3f0a667f7"
+}
